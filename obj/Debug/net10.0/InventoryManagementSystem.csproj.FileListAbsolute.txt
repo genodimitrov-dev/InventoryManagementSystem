@@ -1,0 +1,15 @@
+C:\Projects\InventoryManagementSystem\bin\Debug\net10.0\InventoryManagementSystem.exe
+C:\Projects\InventoryManagementSystem\bin\Debug\net10.0\InventoryManagementSystem.deps.json
+C:\Projects\InventoryManagementSystem\bin\Debug\net10.0\InventoryManagementSystem.runtimeconfig.json
+C:\Projects\InventoryManagementSystem\bin\Debug\net10.0\InventoryManagementSystem.dll
+C:\Projects\InventoryManagementSystem\bin\Debug\net10.0\InventoryManagementSystem.pdb
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.AssemblyInfoInputs.cache
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.AssemblyInfo.cs
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.sourcelink.json
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.dll
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\refint\InventoryManagementSystem.dll
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.pdb
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\InventoryManagementSystem.genruntimeconfig.cache
+C:\Projects\InventoryManagementSystem\obj\Debug\net10.0\ref\InventoryManagementSystem.dll
