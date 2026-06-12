@@ -141,6 +141,25 @@ class Program
             }
         }
     }
+    static void SearchByName(List<Product> products)
+    {
+        string searchName;
+        Console.Write("Enter name: ");
+        searchName = Console.ReadLine().ToUpper();
+        bool found = false;
+        foreach(Product p in products)
+        {
+            if(p.Name.Contains(searchName, StringComparison.OrdinalIgnoreCase))
+            {
+                found = true;
+                PrintProduct(p);
+            }
+        }
+        if(!found)
+        {
+            Console.WriteLine("No product found");
+        }
+    }
     static void DeleteProducts(List<Product> products)
     {
         string searchCode;
