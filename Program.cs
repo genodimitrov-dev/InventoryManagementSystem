@@ -39,11 +39,12 @@ class Program
         Console.WriteLine("2. Show products");
         Console.WriteLine("3. Show S products");
         Console.WriteLine("4. Search by code");
-        Console.WriteLine("5. Delete products");
-        Console.WriteLine("6. Save to files");
-        Console.WriteLine("7. Load from files");
-        Console.WriteLine("8. Edit products");
-        Console.WriteLine("9. Exit");
+        Console.WriteLine("5. Search by name");
+        Console.WriteLine("6. Delete products");
+        Console.WriteLine("7. Save to files");
+        Console.WriteLine("8. Load from files");
+        Console.WriteLine("9. Edit products");
+        Console.WriteLine("10. Exit");
     }
     static void EditMenu()
     {
@@ -386,18 +387,21 @@ class Program
                     SearchByCode(products);
                     break;
                 case "5":
-                    DeleteProducts(products);
+                    SearchByName(products);
                     break;
                 case "6":
-                    SaveToFile(products);
+                    DeleteProducts(products);
                     break;
                 case "7":
-                    LoadFromFile(products);
+                    SaveToFile(products);
                     break;
                 case "8":
+                    LoadFromFile(products);
+                    break;
+                case "9":
                     EditProduct(products[0]);
                     break;
-                case "9":                    
+                case "10":                    
                     ProgramRunning = false;
                     break;
                 default:
