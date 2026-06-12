@@ -1,0 +1,76 @@
+ int n;
+        Console.Write("Enter number of products: ");
+        n = int.Parse(Console.ReadLine());
+        while(n<0||n>1000)
+        {
+            Console.Write("The number doesn't meet the requirments. Please enter again: ");
+            n = int.Parse(Console.ReadLine());
+        }
+         List<Product> products = new List<Product>();
+        for(int i=0; i<n; i++)
+        {
+            products.Add(ReadProduct());
+        }
+        products.Sort((a,b)=> a.Position.CompareTo(b.Position));
+        foreach(Product p in products)
+        {
+            PrintProduct(p);
+        }
+        List<Product>specialProducts = new List<Product>();
+        foreach(Product p in products)
+        {
+            if(p.Group == 'S')
+            {
+                specialProducts.Add(p);
+            }
+        }
+        specialProducts.Sort((a,b)=>
+        {
+            string dateA = ConvertDate(a.Date);
+            string dateB = ConvertDate(b.Date);
+            if(dateA!=dateB)
+            {
+                return dateA.CompareTo(dateB);
+            }
+            return b.Shelflife.CompareTo(a.Shelflife);
+        });
+        foreach(Product p in specialProducts)
+        {
+            PrintProduct(p);
+        }
+        string searchCode;
+        Console.Write("Enter code: ");
+        searchCode = Console.ReadLine();
+        bool found = false;
+        bool hasSpacial = false;
+        double TotalQuantity = 0;
+        double minTemp = double.MaxValue;
+        foreach(Product p in products)
+        {
+            if(p.Code == searchCode)
+            {
+                found = true;
+                PrintProduct(p);
+                TotalQuantity += p.Quantity;
+                if(p.Group == 'S')
+                {
+                    hasSpacial = true;
+                    if(p.Temperature < minTemp)
+                    {
+                        minTemp = p.Temperature;
+                    }
+                }
+            }
+        }
+        if(!found)
+        {
+            Console.WriteLine("No product found");
+        }
+        else
+        {
+            Console.WriteLine("Total quantity: " + TotalQuantity + " kg");
+            if(hasSpacial)
+            {
+                Console.WriteLine("Minimum temperature: " + minTemp.ToString("F1") + " °C");
+            }
+        }
